@@ -1,5 +1,5 @@
 {
-  "name": "darkghosthunter/laraconfig",
+  "name": "ricventu/laraconfig",
   "description": "Per-user settings repository system for Laravel",
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -8,6 +8,10 @@
     {
       "name": "Italo Baeza C.",
       "email": "darkghosthunter@gmail.com"
+    },
+    {
+      "name": "Riccardo Venturini",
+      "email": "ricventu@gmail.com"
     }
   ],
   "require": {
