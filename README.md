@@ -1,8 +1,7 @@
-This package has been archived.
+This package is a fork of [DarkGhostHunter/Laraconfig](https://github.com/DarkGhostHunter/Laraconfig), that is not maintained anymore.
+I fixed some issues, and update dependencies for use with [Laravel](https://laravel.com) 9.x
 
-Sorry guys and gals, I bit more than I can chew and I'm currently not using this package to justify its support.
-
-I may revisit this in the near future.
+For Laravel 8.x use branch v1
 
 ---
 
@@ -22,7 +21,8 @@ User::find(1)->settings->set('color', 'red');
 
 ## Requirements
 
-- Laravel 8.x
+- Laravel 8.x (branch v1)
+- Laravel 9.x (branch master)
 - PHP 8.0 or later
 
 ## How it works
