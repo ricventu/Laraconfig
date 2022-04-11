@@ -8,7 +8,7 @@ To install this repository, add this to your composer.json, change `master` to t
    "repositories":[
         {
             "type": "vcs",
-            "url": "git@github.com:ricventu/Laraconfig.git"
+            "url": "https://github.com/ricventu/Laraconfig.git"
         }
    ],
    "require": {
