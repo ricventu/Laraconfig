@@ -2,7 +2,6 @@
 
 namespace DarkGhostHunter\Laraconfig;
 
-use DarkGhostHunter\Laraconfig\Eloquent\Setting;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
@@ -15,7 +14,6 @@ use RuntimeException;
  *
  * @package DarkGhostHunter\Laraconfig
  *
- * @method Setting get(string $name, mixed $default = null)
  */
 class SettingsCollection extends Collection
 {
@@ -105,6 +103,20 @@ class SettingsCollection extends Collection
 
             $instance->set($setting, $force);
         }
+    }
+
+    /**
+     * Get an item from the collection by name.
+     *
+     * @param $key
+     * @param $default
+     * @return mixed
+     */
+    public function get($key, $default = null) {
+        if (array_key_exists($key, $this->items)) {
+            return $this->items[$key];
+        }
+        return $this->where('name', $key)->first() ?: value($default);
     }
 
     /**
