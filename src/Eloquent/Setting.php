@@ -129,7 +129,7 @@ class Setting extends Model
     public function fillFromMetadata(Metadata $metadata): static
     {
         return $this->forceFill(
-            $metadata->only('name', 'type', 'default', 'group', 'bag')
+            $metadata->only('name', 'type', 'default', 'group', 'bag', 'is_enabled')
         )->syncOriginal();
     }
 
