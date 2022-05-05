@@ -2,6 +2,7 @@
 
 namespace DarkGhostHunter\Laraconfig;
 
+use DarkGhostHunter\Laraconfig\Eloquent\Setting;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
@@ -103,6 +104,21 @@ class SettingsCollection extends Collection
 
             $instance->set($setting, $force);
         }
+    }
+
+    /**
+     * Push one or more items onto the end of the collection.
+     *
+     * @param  Setting  ...$values
+     * @return \Illuminate\Support\Collection
+     */
+    public function push(...$values)
+    {
+        foreach ($values as $value) {
+            $this->items[$value->name] = $value;
+        }
+
+        return $this;
     }
 
     /**
