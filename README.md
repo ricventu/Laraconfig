@@ -1,7 +1,8 @@
 This package is a fork of [DarkGhostHunter/Laraconfig](https://github.com/DarkGhostHunter/Laraconfig), that is not maintained anymore.
 I fixed some issues, and update dependencies for use with [Laravel](https://laravel.com) 9.x
-For Laravel 8.x use branch v1.x-dev
-For Laravel 8.x use branch master
+
+- For Laravel 8.x use branch v1.x-dev
+- For Laravel 9.x use branch master
 
 To install this repository, add this to your composer.json, change `master` to the branch you want:
 ```
