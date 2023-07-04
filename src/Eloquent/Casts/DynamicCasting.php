@@ -44,7 +44,7 @@ class DynamicCasting implements CastsAttributes
             Metadata::TYPE_ARRAY => Arr::wrap(json_decode($value, true, 512, JSON_THROW_ON_ERROR)),
             Metadata::TYPE_BOOLEAN => (bool) $value,
             Metadata::TYPE_DATETIME => Carbon::parse($value),
-            Metadata::TYPE_COLLECTION => new Collection(Arr::wrap(json_decode($value, true, 512, JSON_THROW_ON_ERROR))),
+            Metadata::TYPE_COLLECTION => new Collection(Arr::wrap(json_decode($value ?? '{}', true, 512, JSON_THROW_ON_ERROR))),
             Metadata::TYPE_FLOAT => (float) $value,
             Metadata::TYPE_INTEGER => (int) $value,
             default => $value,
